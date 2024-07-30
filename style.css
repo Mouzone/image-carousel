@@ -27,3 +27,22 @@ img {
     justify-content: center;
     align-content: center;
 }
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.active {
+    background-color: black;
+}
+#progress {
+    margin-top: 40px;
+    justify-self: center;
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}

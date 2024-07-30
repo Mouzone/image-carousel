@@ -7,6 +7,7 @@ image_links = [
     "download (2).jpeg",
     "images.jpeg"
 ]
+
 let curr_position = 0
 const left_button = document.querySelector("button#left")
 left_button.addEventListener("click", event => {
@@ -15,6 +16,11 @@ left_button.addEventListener("click", event => {
         curr_position = image_links.length - 1
     }
     image_element.src = `images/${image_links[curr_position]}`
+
+    const curr_active = document.querySelector(".active")
+    curr_active.classList.remove("active")
+    const to_be_active = document.getElementById(`${curr_position}`)
+    to_be_active.classList.add("active")
 })
 
 const right_button = document.querySelector("button#right")
@@ -24,7 +30,24 @@ right_button.addEventListener("click", event => {
         curr_position = 0
     }
     image_element.src = `images/${image_links[curr_position]}`
+
+    const curr_active = document.querySelector(".active")
+    curr_active.classList.remove("active")
+    const to_be_active = document.getElementById(`${curr_position}`)
+    to_be_active.classList.add("active")
 })
 
-// todo: generate circles, and each circle links to the slide when clicked
+const progress_circles = document.getElementById("progress")
+let counter = 0
+image_links.forEach(link => {
+    const circle = document.createElement("span")
+    progress_circles.appendChild(circle)
+    circle.id = `${counter}`
+    circle.classList.add("dot")
+    if (counter === 0){
+        circle.classList.add("active")
+    }
+    counter++
+})
+
 // todo: add auto play based on timer
