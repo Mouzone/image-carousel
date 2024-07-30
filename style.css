@@ -8,12 +8,27 @@ body {
     height: 100vh;
     width: 100vw;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-content: center;
 }
 
 .button-container {
     align-content: center;
+}
+
+.arrow {
+    border: solid #bbb;
+    border-width: 0 10px 10px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.left {
+    transform: rotate(135deg);
+}
+
+.right {
+    transform: rotate(-45deg);
 }
 
 img {
@@ -39,6 +54,7 @@ img {
 .active {
     background-color: black;
 }
+
 #progress {
     margin-top: 40px;
     justify-self: center;
