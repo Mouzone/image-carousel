@@ -47,7 +47,17 @@ image_links.forEach(link => {
     if (counter === 0){
         circle.classList.add("active")
     }
+    circle.addEventListener("click", event => {
+        const curr_active = document.querySelector(".active")
+        curr_active.classList.remove("active")
+        const to_be_active = event.currentTarget
+        to_be_active.classList.add("active")
+        image_element.src = `images/${image_links[parseInt(event.currentTarget.id)]}`
+        curr_position = parseInt(event.currentTarget.id)
+    })
     counter++
 })
+
+
 
 // todo: add auto play based on timer
