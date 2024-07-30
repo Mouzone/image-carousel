@@ -27,4 +27,4 @@ right_button.addEventListener("click", event => {
 })
 
 // todo: generate circles, and each circle links to the slide when clicked
-// todo: add timeout
+// todo: add auto play based on timer

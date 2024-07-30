@@ -5,14 +5,25 @@
 }
 
 body {
+    height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: space-around;
+    align-content: center;
 }
 
 .button-container {
     align-content: center;
 }
 
-#slideshow {
+img {
+    height: 300px;
+    width: auto;
+}
 
+#slideshow {
+    width: 500px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
 }
